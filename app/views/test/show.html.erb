@@ -1,6 +1,15 @@
 <h1>
-    <%= @testShow.title%>
+    <%= @test.title%>
 </h1>
 <p>
-    <%= @testShow.body%>
+    <%= @test.body%>
 </p>
+
+<ul>
+    <li> <%= link_to "Edit", edit_test_path(@test) %> </li>
+    <li> <%= link_to "Destroy", test_path(@test), data:{
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %></li>
+</ul>
+

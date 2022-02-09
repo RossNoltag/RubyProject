@@ -3,12 +3,12 @@
 <ul>
   <% @testlist.each do|test| %>
     <li>
-<!-- link_to generates URL from test.title-->
       <%= link_to test.title, test%>
-      <%= link_to test.title, edit_test %> 
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Test", new_test_path %>
 
 
 
